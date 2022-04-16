@@ -1,0 +1,9 @@
+---
+- name: Deploy docker img
+  hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Pull miniproj image
+      docker_image:
+        name: ganeshbarma/miniproj
+        source: pull
