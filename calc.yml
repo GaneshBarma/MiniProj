@@ -3,6 +3,20 @@
   hosts: localhost
   remote_user: root
   tasks:
+    - name: Package Installer For Python3 
+      package:
+        name: python3
+        state: present
+
+    - name: Installing python library for the Docker Remote API
+      pip:
+        name: docker-py
+    - name: Start service docker
+      service:
+        name: docker
+        state: started
+
+
     - name: Pull miniproj image
       docker_image:
         name: ganeshbarma/miniproj
