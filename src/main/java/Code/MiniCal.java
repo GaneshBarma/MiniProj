@@ -1,17 +1,17 @@
-package SciCal;
+package Code;
 import java.lang.Math;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.*;
-public class My_Main 
+public class MiniCal 
 {
- private static final Logger logger = LogManager.getLogger(My_Main.class);
- public My_Main() {}
+ private static final Logger logger = LogManager.getLogger(MiniCal.class);
+ public MiniCal() {}
  public static void main(String[] args) 
  {
    try
    {
-   My_Main calculator=new My_Main();
+   MiniCal calculator=new MiniCal();
    Scanner scanner=new Scanner(System.in);
    System.out.println("Hii, Welcome to Scientific Calculator!!");
    System.out.println("Choose which operation to do, by selecting the corresponding number");
@@ -44,7 +44,7 @@ public class My_Main
    catch(InputMismatchException error)
    {
    System.out.println("Invalid input, Entered input is not of the expected type");
-   //logger.error("Invalid input, Entered input is not of the expected type");
+   logger.error("Invalid input, Entered input is not of the expected type");
    return;
    }           
  }

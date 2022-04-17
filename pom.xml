@@ -25,7 +25,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>SciCal.My_Main</mainClass>
+                                    <mainClass>Code.MiniCal</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
