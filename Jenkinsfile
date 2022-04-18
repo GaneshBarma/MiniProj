@@ -1,5 +1,4 @@
 pipeline {
-
   tools{
 	jdk '8'
 	maven '3.8.5'

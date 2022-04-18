@@ -1,2 +1,2 @@
-[av]
-172.16.133.103 ansible_ssh_pass=K@rthik01 ansible_user=lenovo
+[suchith]
+172.16.144.254 ansible_ssh_pass=suchith2000 ansible_user=suchit
