@@ -16,18 +16,6 @@ pipeline {
         git 'https://github.com/GaneshBarma/MiniProj'
       }
     }
-    stage('MVN COMPILE') {
-      steps {
-        echo "Compiling the source Java classes of the project"
-		sh "mvn compile"
-      }
-    }
-    stage('MVN TEST') {
-      steps {
-        echo "Running the test cases of the project"
-        sh "mvn test"
-      }
-    }
     stage('MVN INSTALL') {
       steps {
         echo "building the project and installs the project files(JAR) to the local repository"
