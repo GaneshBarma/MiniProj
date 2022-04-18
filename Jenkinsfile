@@ -54,7 +54,7 @@ pipeline {
     }
     stage('Ansible') {
       steps{
-        ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible',  playbook: 'calc.yml', sudoUser: null
+        ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'Inventory' ,playbook: 'calc.yml', sudoUser: null
       }
     }    
   }
