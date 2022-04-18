@@ -1,6 +1,6 @@
 ---
 - name: Deploy docker img
-  hosts: suchith
+  hosts: av
   remote_user: root
   tasks:
     - name: Pull miniproj image
