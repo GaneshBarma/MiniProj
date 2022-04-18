@@ -13,43 +13,43 @@ public class MiniCal
    {
    MiniCal calculator=new MiniCal();
    Scanner scanner=new Scanner(System.in);
-   System.out.println("Hii, Welcome to Scientific Calculator!!");
-   System.out.println("Choose which operation to do, by selecting the corresponding number");
-   System.out.println("Press 1 to get square root \nPress 2 to get factorial\nPress 3 to get natural logarithm\nPress 4 to get power function");
-   int input=scanner.nextInt();;
+   System.out.println("This is a Mini Scientific Calculator.");
+   System.out.println("You can use the operations by entering their respective number: ");
+   System.out.println("1 - Square Root \n2 - Factorial\n3 - Natural Logarithm\n4 - Power");
+   int input=scanner.nextInt();
    if(input==1)
    {
-   System.out.println("Enter the number");
-   System.out.println("Square root result is : " + calculator.root(scanner.nextDouble()));
-   }
-   else if(input==3)
-   {
-   System.out.println("Enter the number");
-   System.out.println("Natural logarithm result is : " + calculator.log(scanner.nextDouble()));
+   System.out.println("Enter a number to get the square root.");
+   System.out.println("Square root result is : " + calculator.sqroot(scanner.nextDouble()));
    }
    else if(input==2)
    {
-   System.out.println("Enter the number");
+   System.out.println("Enter a number to get the factorial");
    System.out.println("Factorial result is : " + calculator.factorial(scanner.nextInt()));
+   }
+   else if(input==3)
+   {
+       System.out.println("Enter a number to get the natural logarithm");
+       System.out.println("Natural logarithm result is : " + calculator.log(scanner.nextDouble()));
    }
    else if(input==4)
    {
-   System.out.println("Enter the numbers");
+   System.out.println("Enter two numbers that is base and coefficient to get the power");
    System.out.println("Power function result is : " + calculator.power(scanner.nextDouble(),scanner.nextDouble()));
    }
    else
-   System.out.println("No corresponding operation for the given input :(");
-   System.out.println("Done, Bye!!");
+   System.out.println("The range is only from 1-4, other numbers are invalid");
+   System.out.println("Sorry, Run Again, :(");
    }
    catch(InputMismatchException error)
    {
    System.out.println("Invalid input, Entered input is not of the expected type");
    logger.error("Invalid input, Entered input is not of the expected type");
-   return;
-   }           
+//   return;
+   }
  }
-//These functions are not defined over the entire real range. So, for inputs out of the domains, nan is returned.
- public double root(double number1) 
+
+ public double sqroot(double number1)
  {
   logger.info("[ROOT] - " + number1);
   double return_val = Math.sqrt(number1);

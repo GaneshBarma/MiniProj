@@ -1,5 +1,4 @@
 package Code;
-//import SciCal.Main;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -8,8 +7,8 @@ public class TestCal {
     MiniCal calculator = new MiniCal();
 //TruePositive
 	@Test
-	public void test_root() {
-		double actual=calculator.root(16.0);
+	public void test_sqroot() {
+		double actual=calculator.sqroot(16.0);
 		double exp=4.0;
 		assertEquals(actual,exp, DELTA);
 	}
@@ -31,10 +30,10 @@ public class TestCal {
 		double exp=8.0;
 		assertEquals(actual,exp, DELTA);
 	}
-//FalsePositive	
+//FalsePositive
 	@Test
-	public void test_root2() {
-		double actual=calculator.root(17.0);
+	public void test_sqroot2() {
+		double actual=calculator.sqroot(17.0);
 		double exp=4.0;
 		assertNotEquals(actual,exp, DELTA);
 	}
